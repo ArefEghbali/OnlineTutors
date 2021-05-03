@@ -1,0 +1,35 @@
+$primary: rgba(59, 45, 224, 1);
+$dark: rgba(39, 37, 62, 1);
+$secondary: rgba(235, 182, 48, 1);
+
+body,
+html {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-display: swap;
+    color: $dark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 2.488rem;
+}
+
+h2 {
+    font-size: 2.074rem;
+}
+
+h3 {
+    font-size: 1.728rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
