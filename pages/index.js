@@ -8,7 +8,11 @@ import { useSpring, animated } from 'react-spring'
 
 import Button from '../Components/Button'
 
-import { UilInstagram, UilDribbble } from '@iconscout/react-unicons'
+import {
+    UilInstagram,
+    UilDribbble,
+    UilArrowRight,
+} from '@iconscout/react-unicons'
 
 export default function Home() {
     const fadeShapeBottom = useSpring({
@@ -78,7 +82,9 @@ export default function Home() {
                 const x = (window.innerWidth - e.pageX * speed) / 100
                 const y = (window.innerHeight - e.pageY * speed) / 100
 
-                layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+                if (e.pageY <= window.innerHeight) {
+                    layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+                }
             })
         }
 
@@ -161,7 +167,9 @@ export default function Home() {
                                 Join Us/Login
                             </a>
                         </Link>
-                        <Button type="button">Start Learning</Button>
+                        <Button type="button" color="primary">
+                            Start Learning
+                        </Button>
                     </div>
                 </div>
             </animated.div>
@@ -183,7 +191,9 @@ export default function Home() {
                             certificates for finishing classes.
                         </p>
                         <div className="flex items-center justify-start mt-8">
-                            <Button type="button">Start Learning</Button>
+                            <Button type="button" color="primary">
+                                Start Learning
+                            </Button>
                             <Link href="/how">
                                 <a className="ml-6 py-3 px-8 rounded-full border-2 border-indigo-500 text-indigo-500 hover:bg-indigo-500 hover:text-white transition duration-200 colors">
                                     How It Works?
@@ -205,10 +215,10 @@ export default function Home() {
                     className="w-full h-3/4 grid place-items-center relative"
                     style={fadeBottom}>
                     <div
-                        className="rounded-full w-3/4 h-3/4 bg-indigo-500 absolute top-0 left-20 z-10 move-paral"
+                        className="rounded-full w-96 h-96 bg-indigo-500 absolute top-10 left-30 z-10 move-paral"
                         data-speed="3"></div>
                     <div
-                        className="rounded-full w-2/5 h-2/5 bg-pink-500 absolute bottom-1/4 left-0 z-20 move-paral"
+                        className="rounded-full w-64 h-64 bg-pink-500 absolute bottom-1/4 left-20 z-20 move-paral"
                         data-speed="3"></div>
                     <img
                         src="/static/images/QCircle.svg"
@@ -233,6 +243,81 @@ export default function Home() {
                         </h3>
                     </div>
                 </animated.div>
+            </div>
+            <div className="md:container mx-auto mt-20">
+                <h2 className="text-center w-full mb-8">
+                    How we help students
+                </h2>
+                <div className="grid grid-cols-3 items-center justify-between gap-8">
+                    <div className="rounded-md shadow-md p-4 border border-black-100 pb-8">
+                        <img
+                            src="/static/images/onlineclass.svg"
+                            alt="Online Class"
+                            width="100%"
+                            height="auto"
+                        />
+                        <h4 className="text-center">Online Classes</h4>
+                        <p className="text-center text-black-300">
+                            We provide online classes and video tutorials for
+                            students in all subjects.
+                        </p>
+                        <Link href="/valid-certificate">
+                            <a className="flex items-center justify-center text-center mt-4 text-amber-500">
+                                Learn More
+                                <UilArrowRight className="ml-2" />
+                            </a>
+                        </Link>
+                    </div>
+                    <div className="rounded-md shadow-md p-4 border border-black-100 pb-8">
+                        <img
+                            src="/static/images/graduation.svg"
+                            alt="Graduation"
+                            width="100%"
+                            height="auto"
+                        />
+                        <h4 className="text-center">Valid Certification</h4>
+                        <p className="text-center text-black-300">
+                            After students pass the final tests we give them
+                            valid certifications approving that they passed the
+                            subjects.
+                        </p>
+                        <Link href="/valid-certificate">
+                            <a className="flex items-center justify-center text-center mt-4 text-amber-500">
+                                Learn More
+                                <UilArrowRight className="ml-2" />
+                            </a>
+                        </Link>
+                    </div>
+                    <div className="rounded-md shadow-md p-4 border border-black-100 pb-8">
+                        <img
+                            src="/static/images/goodtutors.svg"
+                            alt="Online Tutors"
+                            width="100%"
+                            height="auto"
+                        />
+                        <h4 className="text-center">Experienced Tutors</h4>
+                        <p className="text-center text-black-300">
+                            Our tutors are experienced teachers and can help
+                            students learn any subject easily.
+                        </p>
+                        <Link href="/valid-certificate">
+                            <a className="flex items-center justify-center text-center mt-4 text-amber-500">
+                                Learn More
+                                <UilArrowRight className="ml-2" />
+                            </a>
+                        </Link>
+                    </div>
+                </div>
+                <div className="grid grid-cols-2 gap-8 mt-20 pb-8">
+                    <div>
+                        <h2>Get a personal tutor</h2>
+                        <p className="text-black-300">
+                            If you want more teaching for yourself or your kids
+                            you can get a personal tutor and they will teach
+                            your kids in more details.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     )
