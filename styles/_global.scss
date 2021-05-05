@@ -8,6 +8,11 @@ html {
     font-size: 16px;
     font-display: swap;
     color: $dark;
+    overflow-x: hidden;
+}
+
+* {
+    cursor: none;
 }
 
 p {
@@ -36,4 +41,8 @@ h3 {
 
 h4 {
     font-size: 1.44rem;
+}
+
+button {
+    cursor: none;
 }
