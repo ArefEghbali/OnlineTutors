@@ -201,6 +201,28 @@ export default function Home() {
                     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
                     rel="stylesheet"
                 />
+                <link
+                    rel="apple-touch-icon"
+                    sizes="180x180"
+                    href="../public/static/favicon/apple-touch-icon.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="32x32"
+                    href="../public/static/favicon/favicon-32x32.png"
+                />
+                <link
+                    rel="icon"
+                    type="image/png"
+                    sizes="16x16"
+                    href="../public/static/favicon/favicon-16x16.png"
+                />
+                <link rel="manifest" href="/favicon/site.webmanifest" />
+                <link
+                    rel="mask-icon"
+                    href="../public/static/favicon/safari-pinned-tab.svg"
+                    color="#5bbad5"></link>
             </Head>
             <div className="cursor hidden md:block" ref={cursor}></div>
             <div className="fixed hidden 2xl:flex top-1/2 md:-left-14 xl:-left-8 transform -rotate-90">
@@ -234,7 +256,7 @@ export default function Home() {
                     }`}>
                     <div className="flex items-center justify-between w-full md:w-max">
                         <div className="flex items-center justify-start">
-                            <Image
+                            <img
                                 src="/static/images/logo.svg"
                                 alt="Logo"
                                 width="34px"
@@ -748,7 +770,7 @@ export default function Home() {
                         </div>
                         <div className="mb-20 md:mb-0">
                             <h4>Join Our Newsletter</h4>
-                            <div className="flex items-center justify-between w-full p-4 bg-white rounded-lg focus:outline-none mt-4 w-3/4">
+                            <div className="flex items-center justify-between p-4 bg-white rounded-lg focus:outline-none mt-4 w-3/4">
                                 <input
                                     type="text"
                                     name="newsletter"
