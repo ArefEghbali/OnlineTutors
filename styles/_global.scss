@@ -46,3 +46,46 @@ h4 {
 button {
     cursor: none;
 }
+
+@media only screen and (max-width: 760px) {
+    body {
+        font-size: 14px !important;
+    }
+
+    h1 {
+        font-size: 1.383rem;
+    }
+
+    h2 {
+        font-size: 1.296rem;
+    }
+
+    h3 {
+        font-size: 1.215rem;
+    }
+
+    #hero-qcircle {
+        width: 200px;
+        height: 180px;
+    }
+
+    .navigation {
+        z-index: 9999;
+
+        a {
+            font-size: 18px;
+        }
+    }
+}
+
+@media only screen and (min-width: 1260px) and (max-width: 1440px) {
+    #qcirclebottom {
+        width: 80px;
+        height: auto;
+    }
+
+    #hero-qcircle {
+        width: 220px;
+        height: 200px;
+    }
+}
